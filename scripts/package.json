@@ -1,0 +1,13 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "author": "dev@diecezko.cz",
+  "license": "MIT",
+  "scripts": {
+    "gallery": "node gallery.js",
+    "img2webp": "node img2webp.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6"
+  }
+}
