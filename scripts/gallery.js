@@ -1,13 +1,14 @@
 const fs = require("fs");
 const sharp = require("sharp");
 
-const image_path = "../2023/foto";
+const image_path_gorun = "../foto/gorun";
+const image_path_urban = "../foto/urban";
 
 console.log(
   "Prepare JSON format for https://www.npmjs.com/package/react-photo-gallery-next"
 );
 
-const processImages = async () => {
+const processImages = async (image_path) => {
   let array = [];
 
   try {
@@ -26,8 +27,8 @@ const processImages = async () => {
 
           if (p.includes(".webp"))
             array.push({
-              src: `https://foto2024.diecezko.cz/${p}`,
-              original: `https://foto2024.diecezko.cz/${p}`,
+              src: `https://foto2024.diecezko.cz/foto/gorun/${p}`,
+              original: `https://foto2024.diecezko.cz/foto/gorun/${p}`,
               width: width,
               height: height,
               alt: "Fotka z jarního Diecézka 2024",
@@ -51,4 +52,5 @@ const processImages = async () => {
 };
 
 // Call the function to start processing
-processImages();
+processImages(image_path_gorun);
+processImages(image_path_urban);

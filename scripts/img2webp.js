@@ -14,7 +14,7 @@ sharp(`${filename}`)
       },
     },
   })
-  .toFile(`${path}/${filename}`.replace(/\.(jpg|jpeg|png)$/, ".webp"))
+  .toFile(`${filename}`.replace(/\.(jpg|jpeg|png)$/, ".webp"))
   .then((info) => {
     // console.log(info);
   })
