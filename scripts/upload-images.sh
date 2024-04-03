@@ -37,6 +37,7 @@ for file in "$source_folder"/*; do
       # Generate files
       rm ../foto/gorun/images.json
       yarn gallery
+      echo "NEXT"
       yarn img2webp "$destination_folder/$file_name"
 
       # Commit changes
