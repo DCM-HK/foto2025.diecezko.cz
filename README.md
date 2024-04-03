@@ -1,1 +1,2 @@
-# foto2024.diecezko.cz
+# Diecézko 2024 - fotografie
+
