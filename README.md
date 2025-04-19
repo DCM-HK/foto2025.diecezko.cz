@@ -1,2 +1,2 @@
-# Diecézko 2024 - fotografie
+# Diecézko 2025 - fotografie
 
