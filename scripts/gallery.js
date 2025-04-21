@@ -4,8 +4,8 @@ const sharp = require("sharp");
 // const image_path_gorun = "../foto/gorun";
 // const image_path_urban = "../foto/urban";
 
-const author = "hrabovsky";
-const image_path_hrabovsky = `../foto/${author}`;
+const author = "urban";
+const image_path_urban = `../foto/${author}`;
 
 console.log(
   "Prepare JSON format for https://www.npmjs.com/package/react-photo-gallery-next"
@@ -15,7 +15,7 @@ const processImages = async () => {
   let array = [];
 
   try {
-    const photos = fs.readdirSync(image_path_hrabovsky);
+    const photos = fs.readdirSync(image_path_urban);
 
     // Process images sequentially
     await Promise.all(
@@ -23,7 +23,7 @@ const processImages = async () => {
         let width, height;
 
         try {
-          const info = await sharp(`${image_path_hrabovsky}/${p}`).metadata();
+          const info = await sharp(`${image_path_urban}/${p}`).metadata();
 
           width = info.width > info.height ? 4 : 3;
           height = info.width > info.height ? 3 : 4;
@@ -44,7 +44,7 @@ const processImages = async () => {
     );
 
     // Write array into the file
-    const file = fs.createWriteStream(`${image_path_hrabovsky}/images.json`);
+    const file = fs.createWriteStream(`${image_path_urban}/images.json`);
     file.write(JSON.stringify(array));
     file.end();
 
